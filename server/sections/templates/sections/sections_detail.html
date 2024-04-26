@@ -1,0 +1,17 @@
+{% extends "sections/base.html" %}
+
+{% block content %}
+
+<div class="center">
+	    <h2 class="text-center">{{ name_title_form }}</h2>
+
+		{{ post.name }}</br>
+		{{ post.content }}</br>
+		<img src="{{ post.photo.url }}" alt="" width="200" height="200"><br>
+		{% if post.errors %}
+			<small>{{ field.errors|striptags }}</small>
+		{% endif %}
+
+</div>
+
+{% endblock %}

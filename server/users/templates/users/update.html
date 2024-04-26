@@ -1,0 +1,24 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+<div class="center">
+	  <form method="post" class="card" novalidate enctype="multipart/form-data">
+	  	{% csrf_token %}
+	    <h2 class="text-center">{{ name_title_form }}</h2>
+
+		  	{{ form.username }}<br>
+		  	{{ form.email }}<br>
+		  	{{ form.phone }}<br>
+		    {{ form.first_name }}<br>
+		  	{{ form.last_name }}<br>
+
+			{% if field.errors %}
+				<small>{{ field.errors|striptags }}</small>
+			{% endif %}</br>
+
+
+		<input type="submit" value="{{ name_button }}" class="btn btn-primary full-width">
+	</form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "record/base.html" %}
+
+{% block content %}
+
+    {% for post in posts %}
+
+        {{ post.first_name }}</br>
+		{{ post.last_name }}</br>
+		{{ post.age }}</br>
+		{{ post.section }}</br>
+		{{ post.user }}</br>
+        </br>
+
+    {% endfor %}
+
+{% endblock %}

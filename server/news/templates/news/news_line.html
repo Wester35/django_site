@@ -1,0 +1,13 @@
+{% extends "news/base.html" %}
+
+{% block content %}
+
+    {% for post in posts %}
+
+        {{post.title}}<br>
+        {{post.content}}<br>
+        <img src="{{ post.photo.url }}" alt="" width="200" height="200"><br> <br>
+
+    {% endfor %}
+
+{% endblock %}
