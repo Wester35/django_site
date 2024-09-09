@@ -8,7 +8,7 @@ from django.shortcuts import redirect
 
 
 class NewslineCreate(LoginRequiredMixin, CreateView):
-    template_name = "news/templates/news/index.html"
+    template_name = "news/index.html"
     form_class = CreateNews
 
     def form_valid(self, form):
@@ -32,7 +32,7 @@ class NewslineCreate(LoginRequiredMixin, CreateView):
 
 
 class NewsUpdate(LoginRequiredMixin, UpdateView):
-    template_name = "news/templates/news/index.html"
+    template_name = "news/index.html"
     model = News
 
     fields = ['title', 'content', 'photo']
@@ -56,7 +56,7 @@ class NewsUpdate(LoginRequiredMixin, UpdateView):
 
 
 class NewsDetail(DetailView):
-    template_name = "news/templates/news/detail.html"
+    template_name = "news/detail.html"
     model = News
     context_object_name = 'post'
 
@@ -68,7 +68,7 @@ class NewsDetail(DetailView):
 
 
 class NewslineList(ListView):
-    template_name = "news/templates/news/news_line.html"
+    template_name = "news/news_line.html"
     model = News
     context_object_name = 'posts'
 

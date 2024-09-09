@@ -15,7 +15,7 @@ urlpatterns = [
     path('record/', include('record.urls')),
     path('user/', include('users.urls')),
     path('news/', include('news.urls')),
-    path('', index, name="main"),
+    path('', include('main.urls')),
 ]
 
 if settings.DEBUG:

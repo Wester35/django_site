@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1', 'localhost'
+    '127.0.0.1', 'localhost', '26.134.108.211', '0.0.0.0', '26.131.49.161'
 ]
 
 AUTHENTICATION_BACKENDS = [
@@ -89,14 +89,24 @@ WSGI_APPLICATION = 'server.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': os.getenv("ENGINE"),
+#         'NAME': os.getenv("NAME"),
+#         'USER': os.getenv("USER"),
+#         'PASSWORD': os.getenv("PASSWORD"),
+#         'HOST': os.getenv("HOST"),
+#         'PORT': os.getenv("PORT"),
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': os.getenv("ENGINE"),
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv("NAME"),
         'USER': os.getenv("USER"),
         'PASSWORD': os.getenv("PASSWORD"),
         'HOST': os.getenv("HOST"),
-        'PORT': os.getenv("PORT"),
+        'PORT': os.getenv("PORT")
     }
 }
 
