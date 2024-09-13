@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: 400;
+    color: #000;
+    font-size: 16px;
+    /*box-sizing: border-box;*/
+}
+
+.wrapper {
+    background: linear-gradient(180deg, rgba(255, 255, 255) 0%, rgba(255, 227, 227) 100%);
+}
+
+.container {
+/*    padding: 10px 0;
+    border-bottom: 1px solid #ccc;*/
+   /* top: 0;*/
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+/*    position: fixed;
+    padding: 10px 0;*/
+}
+
+/*header .logo {
+
+}*/
+
+.header_1 {
+    padding-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 80vh; /* Можно подкорректировать по желанию */
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 50px; /* Отступ сверху декоративного элемента */
+    left: 20px;
+    color: white;
+    padding: 20px;
+    max-width: 50%;
+    font-size: 1.2em;
+    z-index: 2;
+}
+
+.text-overlay h1 {
+    font-size: 2.5em; /* Заголовок */
+    margin-bottom: 15px;
+}
+
+.text-overlay p {
+    font-size: 1.1em; /* Обычный текст */
+}
+
+.decorative-element {
+    position: absolute;
+    bottom: 0; /* Позиционируем прямо на нижний край контейнера */
+    left: 0; /* Позиционируем прямо на левый край контейнера */
+    z-index: 1; /* Слой позади текста */
+    width: 300px; /* Измените размер по вашему вкусу */
+    height: 1px; /* Пропорциональная высота */
+    opacity: 0.8; /* Можно добавить прозрачность для эффекта */
+    transform: translate(-10%, 20%); /* Сдвиг для точного позиционирования */
+}
+
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/*.events, .history {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.event-card, .history-item {
+    margin: 10px;
+    text-align: center;
+}
+
+.event-card img, .history-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.event-card h3, .history-item p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}*/
+
+/*.events-all { !* trending *!
+    padding-top: 50px;
+}
+
+.events { !* games *!
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.events-all .events img {
+    position: relative;
+    top: 5px;
+    margin-right: 7px;
+}
+
+.event-card { !* block *!
+
+}*/
+
+.trending {
+    padding-top: 50px;
+}
+
+.trending h3 {
+    font-weight: 600;
+    font-size: 31px;
+}
+
+.trending .games {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.trending .games span {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.trending .games span img {
+    position: relative;
+    top: 5px;
+    margin-right: 7px;
+}
+
+/* Блок с футером */
+
+/*footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #dedede;
+    border-top: 1px solid #ccc;
+}*/
+
+footer {
+    background: #ffe3e3;
+    padding: 50px 0;
+}
+
+footer .blocks {
+    display:flex;
+    justify-content: space-between;
+}
+
+footer .blocks p {
+    width: 300px;
+    margin: 15px 0;
+}
+
+footer .blocks h4 {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+footer .blocks ul {
+    list-style: none;
+}
+
+footer .blocks ul li {
+    margin-top: 7px;
+    opacity: 0.8;
+}
+
+footer hr {
+    margin: 30px 0;
+    border: 0;
+    height: 0.6px;
+    background: #fcc;
+}
+
+footer>p {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    .events, .history {
+        flex-direction: column;
+    }
+}

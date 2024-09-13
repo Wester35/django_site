@@ -4,14 +4,54 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 
         <title>{{ title }}</title>
     </head>
     <body>
-    <h2>header</h2>
+    <div class="wrapper">
+    <header class="container">
+            <div class = "container header_1">
+                <a href="" class ="logo"><img src="{% static 'img/church1.png' %}" alt="" class="logo_img" width="80" height="80"></a>
+                <nav>
+                    <ul>
+                        <li><a href="#">кружки</a></li>
+                        <li><a href="#">расписание</a></li>
+                        <li><a href="#">о нас</a></li>
+                        <li><a href="#">вход</a></li>
+                        <li><a href="#">регистрация</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
             {% block content %}
             {% endblock %}
-    <h1>footer</h1>
+        </div>
+    <footer>
+        <hr>
+        <div class="blocks container">
+            <div>
+                <a href="" class ="logo"><img src="{% static 'img/church1.png' %}" alt="" class="logo_img" width="80" height="80"></a>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div>
+                <h4>О нас</h4>
+                <ul>
+                    <li>Заглушка</li>
+                    <li>Заглушка</li>
+                    <li>Заглушка</li>
+                    <li>Заглушка</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Свяжитесь с нами</h4>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <p>88005553535</p>
+            </div>
+        </div>
+        <hr>
+        <p>Copyright ® 2024 Все права защищены</p>
+    </footer>
     </body>
 </html>

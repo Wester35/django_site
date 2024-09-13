@@ -1,9 +1,70 @@
 {% extends "main/base.html" %}
 
 {% block content %}
-	<h1>{{name_title_form}}</h1>
+	<div class="image-container">
+                <img src="{{ MEDIA_URL }}church.png" alt="Церковь">
+                <div class="text-overlay">
+                    <h1>Лучшая школа для лучшего мира</h1>
+                    <p>Здесь мы собираемся каждое воскресенье, чтобы учиться, творить и веселиться, создавая уникальные рукодельные проекты. Наши занятия помогут детям развить творческие способности, моторику рук и воображение.</p>
+                </div>
+                <img src="{{ MEDIA_URL }}decoration.png" alt="Синий декоративный элемент" class="decorative-element">
+            </div>
+            <!--<div class="container events-all">
+            <section class="events">
+                <div class="event-card">
+                    <img src="/images/display.jpg" alt="Event 1">
+                    <h3>Музыкальный и танцевальный показ</h3>
+                </div>
+                <div class="event-card">
+                    <img src="/images/drawing.jpg" alt="Event 2">
+                    <h3>Кружки рисования и шитья</h3>
+                </div>
+                <div class="event-card">
+                    <img src="path/to/event3.jpg" alt="Event 3">
+                    <h3>Воскресный поход в храм на площади</h3>
+                </div>
+            </section>
+            <section class="history">
+                <div class="history-item">
+                    <img src="path/to/history1.jpg" alt="History 1">
+                    <p>Путешествие в прошлое: Увлекательный урок истории...</p>
+                </div>
+                <div class="history-item">
+                    <img src="path/to/history2.jpg" alt="History 2">
+                    <p>Путешествие в прошлое: Увлекательный урок истории...</p>
+                </div>
+            </section>
+            </div>-->
 
-		<h1>Welcome to the Home Page</h1>
-    <p>This is an example of rendering an HTML page using Django class-based views.</p>
-    <button type="submit" class="btn">{{name_button}}</button>
+            <div class="container trending">
+                <a href="#" class="see-all">SEE ALL (пока что так)</a>
+                <h3>Заглушка</h3>
+
+                <div class="games">
+                    <div class="block">
+                        <img src="{{ MEDIA_URL }}game1.svg" alt="">
+                        <span><img src="{{ MEDIA_URL }}fire.svg" alt="">Маленький текст. Заглушка</span>
+                    </div>
+                    <div class="block">
+                        <img src="{{ MEDIA_URL }}game2.svg" alt="">
+                        <span><img src="{{ MEDIA_URL }}fire.svg" alt="">Маленький текст. Заглушка</span>
+                    </div>
+                    <div class="block">
+                        <img src="{{ MEDIA_URL }}game3.svg" alt="">
+                        <span><img src="{{ MEDIA_URL }}fire.svg" alt="">Маленький текст. Заглушка</span>
+                    </div>
+                    <div class="block">
+                        <img src="{{ MEDIA_URL }}game4.svg" alt="">
+                        <span><img src="{{ MEDIA_URL }}fire.svg" alt="">Маленький текст. Заглушка</span>
+                    </div>
+                    <!--<div class="block">
+                        <img src="images/game1.svg" alt="">
+                        <span><img src="images/fire.svg" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cumque deserunt dolorum illo, ipsa labore laborum maiores minima quam quas quasi quidem quod ullam. Accusamus eaque illum incidunt minima quod?</span>
+                    </div>
+                    <div class="block">
+                        <img src="images/game2.svg" alt="">
+                        <span><img src="images/fire.svg" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cumque deserunt dolorum illo, ipsa labore laborum maiores minima quam quas quasi quidem quod ullam. Accusamus eaque illum incidunt minima quod?</span>
+                    </div>-->
+                </div>
+            </div>
 {% endblock %}
