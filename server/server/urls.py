@@ -15,7 +15,9 @@ urlpatterns = [
     path('record/', include('record.urls')),
     path('user/', include('users.urls')),
     path('news/', include('news.urls')),
+    path('api/', include('api.urls')),
     path('', include('main.urls')),
+
 ]
 
 if settings.DEBUG:

@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1', 'localhost', '26.134.108.211', '0.0.0.0', '26.131.49.161'
+    '*', '127.0.0.1', '0.0.0.0'
 ]
 
 AUTHENTICATION_BACKENDS = [
@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'news.apps.NewsConfig',
     'record.apps.RecordConfig',
     'sections.apps.SectionsConfig',
+    'rest_framework',
+    'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [
@@ -151,9 +153,9 @@ EMAIL_FROM_ADDRESS = os.getenv("EMAIL")
 EMAIL_MAIL_SUBJECT = 'Confirm your email {{ user.username }}'
 EMAIL_MAIL_HTML = 'users/mail_body.html'
 EMAIL_MAIL_PLAIN = 'users/mail_body.txt'
-EMAIL_MAIL_TOKEN_LIFE = 60 * 60
+EMAIL_MAIL_TOKEN_LIFE = 30 * 60
 EMAIL_MAIL_PAGE_TEMPLATE = 'users/confirm_template.html'
-EMAIL_PAGE_DOMAIN = 'http://127.0.0.1:8001/'
+EMAIL_PAGE_DOMAIN = 'http://5.228.52.190:8899/'
 EMAIL_MAIL_CALLBACK = verified_callback
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = os.getenv("EHOST")
@@ -167,7 +169,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
-AUTH_USER_MODEL = 'users.CustomUser'
+# AUTH_USER_MODEL = 'users.CustomUser'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
