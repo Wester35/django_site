@@ -21,7 +21,7 @@ class NewslineCreate(LoginRequiredMixin, CreateView):
 
         return redirect('news')
     def get_success_url(self):
-        return reverse_lazy('main')
+        return reverse_lazy('home')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -38,7 +38,7 @@ class NewsUpdate(LoginRequiredMixin, UpdateView):
     fields = ['title', 'content', 'photo']
 
     def get_success_url(self):
-        return reverse_lazy('main')
+        return reverse_lazy('home')
 
     def get(self, request, *args, **kwargs):
         self.object = self.get_object()

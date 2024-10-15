@@ -33,7 +33,7 @@ class RecordUpdate(LoginRequiredMixin, UpdateView):
     fields = ['first_name', 'last_name', 'age', 'section']
 
     def get_success_url(self):
-        return reverse_lazy('main')
+        return reverse_lazy('home')
 
     def get(self, request, *args, **kwargs):
         self.object = self.get_object()
