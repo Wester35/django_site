@@ -45,6 +45,7 @@ class DetailUser(DetailView):
 
     extra_context = {'title': 'Статьи'}
 
+
 class UpdateUser(LoginRequiredMixin, UpdateView):
     template_name = "users/update.html"
     model = CustomUser
@@ -55,7 +56,7 @@ class UpdateUser(LoginRequiredMixin, UpdateView):
         if (self.request.user == self.object):
             return super().get(request, *args, **kwargs)
 
-        return redirect('main')
+        return redirect('home')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
