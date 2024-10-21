@@ -8,6 +8,14 @@ from users.models import CustomUser
 from .serializers import UserProfileSerializer
 from django_email_verification import send_email  # Импорт функции отправки email
 
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from news.models import News
+from .serializers import NewsSerializer
+
+from django.db import DatabaseError
+from rest_framework.exceptions import NotFound
+
 @api_view(['POST'])
 def create_user_profile(request):
     try:
@@ -68,3 +76,20 @@ def check_user(request):
             return Response({"detail": "Пользователь не найден."}, status=status.HTTP_404_NOT_FOUND)
 
     return Response({"detail": "Неправильный метод запроса."}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
+
+
+class NewsListAPIView(APIView):
+    def get(self, request, *args, **kwargs):
+        try:
+            news = News.objects.all()  # Получаем все новости
+            if not news.exists():
+                return Response({"detail": "Новости не найдены."}, status=status.HTTP_404_NOT_FOUND)
+
+            serializer = NewsSerializer(news, many=True, context={'request': request})
+            return Response(serializer.data, status=status.HTTP_200_OK)
+
+        except DatabaseError:
+            return Response({"detail": "Ошибка базы данных."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        except Exception as e:
+            print(f"Error occurred: {e}")
+            return Response({"detail": "Произошла ошибка при получении новостей."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
