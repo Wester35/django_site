@@ -25,3 +25,4 @@ new Swiper('.card-wrapper', {
         }
     }
 });
+

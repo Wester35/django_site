@@ -9,7 +9,9 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 
         <script src="{% static 'js/main.js' %}" defer></script>
+
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="{% static 'js/main2.js' %}" defer></script>
 
         <title>{{ title }}</title>
     </head>
@@ -17,14 +19,14 @@
     <div class="wrapper">
     <header class="container">
             <div class = "container header_1">
-                <a href="" class ="logo"><img src="{% static 'img/church1.png' %}" alt="" class="logo_img" width="80" height="80"></a>
+                <a href="" class ="logo"><img src="{{ MEDIA_URL }}church1.png" alt="" class="logo_img" width="80" height="80"></a>
                 <nav>
                     <ul>
                         <li><a href="#">кружки</a></li>
                         <li><a href="#">расписание</a></li>
                         <li><a href="#">о нас</a></li>
-                        <li><a href="/user/login">вход</a></li>
-                        <li><a href="/user/register">регистрация</a></li>
+                        <li><a href="#">вход</a></li>
+                        <li><a href="#">регистрация</a></li>
                     </ul>
                 </nav>
             </div>
@@ -37,7 +39,7 @@
         <hr>
         <div class="blocks container">
             <div>
-                <a href="" class ="logo"><img src="{% static 'img/church1.png' %}" alt="" class="logo_img" width="80" height="80"></a>
+                <a href="" class ="logo"><img src="{{ MEDIA_URL }}church1.png" alt="" class="logo_img" width="80" height="80"></a>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
             <div>

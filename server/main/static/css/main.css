@@ -1,34 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', 'sans-serif';
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', 'sans-serif';
+    /*font-family: 'Montserrat', 'sans-serif';*/
     font-weight: 400;
     color: #000;
     font-size: 16px;
+    max-width: 100vw;
     /*box-sizing: border-box;*/
 }
+
+/*
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; !* Расстояние между блоками *!
+}
+*/
 
 .wrapper {
     background: linear-gradient(180deg, rgba(255, 255, 255) 0%, rgba(255, 227, 227) 100%);
 }
 
-.container {
-/*    padding: 10px 0;
-    border-bottom: 1px solid #ccc;*/
-   /* top: 0;*/
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-/*    position: fixed;
-    padding: 10px 0;*/
-}
-
 /*header .logo {
 
 }*/
+/*
+calc(250px + (500 - 250) * ((100vw - 500px) / (1920 - 500)));
+*/
+
+.head {
+    /*    padding: 10px 0;
+        border-bottom: 1px solid #ccc;*/
+    /* top: 0;*/
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: sticky;
+    /*top: 0%;
+    z-index: 3;
+    display: block;*/
+    /*    position: fixed;
+        padding: 10px 0;*/
+}
 
 .header_1 {
     padding-top: 4px;
@@ -99,7 +121,6 @@ nav ul li a {
     transform: translate(-10%, 20%); /* Сдвиг для точного позиционирования */
 }
 
-
 .hero {
     position: relative;
     text-align: center;
@@ -131,77 +152,14 @@ nav ul li a {
     font-size: 1.2em;
 }
 
-/*.events, .history {
+/* Блок с новостном лентой */
+
+.swiper-body {
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 20px;
+    min-height: 100vh;
 }
-
-.event-card, .history-item {
-    margin: 10px;
-    text-align: center;
-}
-
-.event-card img, .history-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.event-card h3, .history-item p {
-    margin-top: 10px;
-    font-size: 1.2em;
-}*/
-
-/*.events-all { !* trending *!
-    padding-top: 50px;
-}
-
-.events { !* games *!
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 50px 0;
-}
-
-.events-all .events img {
-    position: relative;
-    top: 5px;
-    margin-right: 7px;
-}
-
-.event-card { !* block *!
-
-}*/
-
-.trending {
-    padding-top: 50px;
-}
-
-.trending h3 {
-    font-weight: 600;
-    font-size: 31px;
-}
-
-.trending .games {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 50px 0;
-}
-
-.trending .games span {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.trending .games span img {
-    position: relative;
-    top: 5px;
-    margin-right: 7px;
-}
-
 .card-wrapper {
     max-width: 1100px;
     margin: 0 60px 35px;
@@ -301,6 +259,381 @@ nav ul li a {
     margin-top: -35px;
 }
 
+/*.events {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.event-card {
+    position: relative;
+    !*margin-top: 50px;
+    margin-right: 40px;*!
+    !*margin: auto;*!
+    margin-top: 30px;
+    text-align: center;
+    width: calc(250px + (500 - 250) * ((100vw - 500px) / (1920 - 500)));;;
+}
+
+.event-card img {
+    !*width: 417px;
+    height: 354px;*!
+    width: calc(200px + (417 - 217) * ((100vw - 500px) / (1920 - 500)));
+    height: calc(200px + (354 - 254) * ((100vw - 500px) / (1920 - 500)));
+    border-radius: 15px;
+    display: block;
+}
+
+.event-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: black;
+    width: calc(200px + (417 - 217) * ((100vw - 500px) / (1920 - 500)));
+    !*padding: 30px;*!
+    background: linear-gradient(to top, rgba(255,228,228) 20%, transparent 100%);
+    !*background: white;*!
+}
+
+.event-text h3 {
+    font-weight: 500;
+    font-size: calc(10px + (20 - 5) * ((100vw - 500px) / (1920 - 500)));
+    margin: calc(5px + (20 - 5) * ((100vw - 500px) / (1920 - 500)));;
+    padding: calc(4px + (16 - 4) * ((100vw - 500px) / (1920 - 500)));
+    width: calc(150px + (300 - 150) * ((100vw - 500px) / (1920 - 500)));
+    text-align: left;
+}*/
+
+/*.events, .history {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.event-card, .history-item {
+    margin: 10px;
+    text-align: center;
+}
+
+.event-card img, .history-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.event-card h3, .history-item p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}*/
+
+/*.events-all { !* trending *!
+    padding-top: 50px;
+}
+
+.events { !* games *!
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.events-all .events img {
+    position: relative;
+    top: 5px;
+    margin-right: 7px;
+}
+
+.event-card { !* block *!
+
+}*/
+
+/*.trending {
+    padding-top: 50px;
+}
+
+.trending h3 {
+    font-weight: 600;
+    font-size: 31px;
+}
+
+.trending .games {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.trending .games span {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.trending .games span img {
+    position: relative;
+    top: 5px;
+    margin-right: 7px;
+}*/
+
+/* Блок с поисковиком */
+
+.search-form {
+    border: 1px solid #0075FF;
+    border-radius: 30px;
+    display: inline-flex;
+    margin-top: 20px;
+    padding: 0 20px;
+    height: 50px;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-color: #0075FF5C;
+    /*position: absolute; right: 10%; margin-top: 30px; margin-right: 6%;*/
+    position: absolute; right: 0; margin-right: 20px;
+}
+
+.search-form-txt {
+    /*font-family: 'Montserrat', 'sans-serif';*/
+    border: none;
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+    padding-right: 10px;
+    background-color: transparent;
+}
+
+.search-form-but {
+    border: none;
+    background-color: transparent;
+}
+
+.search-form-img {
+    display: flex;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+/* Блок с постами */
+
+/*.post {
+    margin-top: 10vh;
+    max-height: 800px;
+    max-width: 1000px;
+    border-radius: 15px;
+    overflow: hidden;
+    !* background-image: url('images/display.jpg');*!
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    backdrop-filter: blur(5px);
+    z-index: 2;
+}
+
+img.background {
+    position: absolute;
+    !* background-image: url('images/display.jpg');*!
+    width: 100%;
+    height: auto;
+    left: 0;
+    opacity: 20%;
+    z-index: -1;
+}
+
+.image-section {
+    flex: 1;
+}
+
+.icon-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.text-section {
+    flex: 1;
+    !*background-image: url('images/display.jpg');*!
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-section p {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text-section a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    margin-top: auto;
+}*/
+
+.blog {
+    font-weight: 400;
+    color: #000;
+    font-size: 16px;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Расстояние между блоками */
+}
+
+.post {
+    max-height: 800px;
+    max-width: 1000px;
+    width: 90%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    backdrop-filter: blur(5px);
+    position: relative; /* Для правильной работы фона */
+}
+
+img.background {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    opacity: 20%;
+    z-index: -1;
+}
+
+.image-section {
+    flex: 1;
+}
+
+.icon-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.text-section {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-section p {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text-section a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+/* Блок с FaQ*/
+
+/*.faq-form {
+    border: 1px solid #0075FF;
+    border-radius: 30px;
+    display: inline-flex;
+    margin-top: 2%;
+    padding: 0 20px;
+    height: 50px;
+    width: 40%;
+}
+
+.faq-form-txt {
+    font-family: 'Montserrat', 'sans-serif';
+    border: none;
+    width: 100%;
+    outline: none;
+    font-size: 22px;
+    padding-right: 10px;
+    background-color: transparent;
+}
+
+.faq-form-but {
+    border: none;
+    background-color: transparent;
+}
+
+.faq-form-img {
+    display: flex;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}*/
+
+.accordion {
+    max-width: 800px;
+    position: relative;
+}
+
+.accordion .contentBx {
+    position: relative;
+    left: 140%;
+    margin-right: 10%;
+    margin-top: 10px; /*Так должно быть, но из-за этого создается белая полоса: margin: 10px 20px;*/
+    margin-left: 20px;
+}
+
+.accordion .contentBx .question {
+    position: relative;
+    padding: 10px 30px;
+    background: #A3CDFF;
+    color: black;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.accordion .contentBx .question::before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+
+.accordion .contentBx.active .question::before {
+    content: "-";
+}
+
+.accordion .contentBx .answer {
+    position: relative;
+    background: #D9EAFF;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+    border-radius: 20px;
+    margin-top: 3px;
+    /*margin-left: 50px;*/
+}
+
+.accordion .contentBx.active .answer {
+    height: 150px;
+    padding: 10px;
+}
+
 /* Блок с футером */
 
 /*footer {
@@ -366,5 +699,9 @@ footer>p {
 
     .card-wrapper .swiper-slide-buttons {
         display: none;
+    }
+    img.bg {
+        left: 50%;
+        margin-left: -320px;
     }
 }
