@@ -7,7 +7,7 @@ from news.models import CategoryNews, News
 class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
-        fields =['password', 'username', 'first_name', 'last_name', 'email', 'is_active', 'parent',]
+        fields = ['password', 'username', 'first_name', 'last_name', 'email', 'is_active', 'parent',]
         extra_kwargs = {
             'password': {'write_only': True}  # Пароль должен быть только для записи
         }
