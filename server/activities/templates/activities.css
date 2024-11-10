@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255) 0%,
+    rgba(255, 227, 227) 100%
+  );
+  background-attachment: fixed;
+}
+
+header {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.activities-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 2rem;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .activities-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+
+.activity-item:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+.activity-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.activity-info h3 {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.activity-info p {
+  font-size: 0.875rem;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.search-input {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid black;
+  margin: 1rem;
+}
+
+footer {
+  background: #ffe3e3;
+  padding: 50px 0;
+}
+
+footer .blocks {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .blocks p {
+  width: 300px;
+  margin: 15px 0;
+}
+
+footer .blocks h4 {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+footer .blocks ul {
+  list-style: none;
+}
+
+footer .blocks ul li {
+  margin-top: 7px;
+  opacity: 0.8;
+}
+
+footer hr {
+  margin: 30px 0;
+  border: 0;
+  height: 0.6px;
+  background: #fcc;
+}
